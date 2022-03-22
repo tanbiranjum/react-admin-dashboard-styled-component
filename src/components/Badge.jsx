@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 import { themeColor } from '../utils/theme'
 
-function Badge({ content, glow = false, paid = false, late = false }) {
+function Badge({ content, glow = false, clean = false, paid = false, late = false }) {
   return (
-    <Div glow={glow} paid={paid} late={late}>
+    <Div glow={glow} paid={paid} late={late} clean={clean}>
       {content}
     </Div>
   )
@@ -27,6 +27,28 @@ const Div = styled.div`
   font-weight: normal;
   color: #2f233d;
   background-color: rgba(109, 134, 245, 0.192);
+  `}
+
+  ${({ paid }) =>
+    paid &&
+    `
+  color: #70e000;
+  background-color: #70e00041;
+  `}
+
+  ${({ late }) =>
+    late &&
+    `
+  color: #ff595e;
+  background-color: #ff595e41;
+  `}
+
+${({ clean }) =>
+    clean &&
+    `
+  color: ${themeColor};
+  border: 0.05rem solid ${themeColor};
+  background-color: transparent;
   `}
 `
 

@@ -21,7 +21,7 @@ function Invoices() {
             </TextContainer>
           </Info>
           <Container>
-            <Badge content="paid" paid />
+            <Badge content="Paid" paid />
             <Price>$ 1,200</Price>
           </Container>
         </Invoice>
@@ -36,7 +36,7 @@ function Invoices() {
             </TextContainer>
           </Info>
           <Container>
-            <Badge content="paid" paid />
+            <Badge content="Late" late />
             <Price>$ 1,200</Price>
           </Container>
         </Invoice>
@@ -58,7 +58,9 @@ const InvoicesContainer = styled.div`
     box-shadow: ${hoverEffect};
   }
 `
+
 const CardContent = styled.div``
+
 const Invoice = styled.div`
   display: flex;
   align-items: center;
