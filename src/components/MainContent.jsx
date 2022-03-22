@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import Earnings from './Earnings'
 import Info from './Info'
+import Invoices from './Invoices'
 import NavBar from './NavBar'
+import Projects from './Projects'
 
 function MainContent() {
   return (
@@ -14,10 +16,18 @@ function MainContent() {
             <Earnings />
             <Info />
           </ColumnOne1>
-          <ColumnTwo1></ColumnTwo1>
+          <ColumnTwo1>
+            <TitleText>Your Projects</TitleText>
+            <Projects />
+          </ColumnTwo1>
         </SectionOne>
         <SectionTwo>
-          <ColumnOne2></ColumnOne2>
+          <ColumnOne2>
+            <InvoiceContainer>
+              <TitleText>Recent Invoices</TitleText>
+              <Invoices />
+            </InvoiceContainer>
+          </ColumnOne2>
           <ColumnTwo2></ColumnTwo2>
         </SectionTwo>
       </SubContainer>
@@ -47,7 +57,7 @@ const SectionOne = styled.div`
   display: flex;
   justify-content: space-between;
   height: 40%;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
 `
 const SectionTwo = styled.div`
@@ -57,9 +67,14 @@ const SectionTwo = styled.div`
 `
 const ColumnOne1 = styled.div`
   display: flex;
-  gap: 3rem;
+  gap: 1.5rem;
 `
 const ColumnOne2 = styled.div``
+
+const InvoiceContainer = styled.div`
+  height: 60%;
+`
+
 const ColumnTwo1 = styled.div`
   display: flex;
   flex-direction: column;
