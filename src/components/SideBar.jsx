@@ -96,7 +96,7 @@ const Links = styled.ul`
   height: 40%;
 `
 const Link = styled.li`
-  margin-left: 25%;
+  margin-left: 20%;
   margin-bottom: 1.2rem;
   align-items: center;
   color: white;
